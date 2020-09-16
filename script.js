@@ -1,7 +1,9 @@
+const imageContainer = document.getElementById('image-container');
+
 
 // UNSPLASH API
 const count = 10;
-const apiKey = '';
+const apiKey = '4DVV1N03R9y736qXG9fVSyI9GeNF8PY4wcwzSktM51g';
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 // Get photos from api
@@ -18,3 +20,4 @@ async function getPhotos() {
 
 // ON LOAD
 getPhotos();
+
