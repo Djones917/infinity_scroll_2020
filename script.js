@@ -1,7 +1,29 @@
 const imageContainer = document.getElementById('image-container');
 const loader = document.getElementById('loader');
 
+
+
 let photosArray = [];
+
+
+
+// Create elements for links, photos add to DOM
+function displayPhotos() {
+  // Run function for each object in photosArray
+  photosArray.forEach((ohoto) => {
+    // Create <a> to link to unsplash
+    const item = document.createElement('a');
+    item.setAttribute('href', photo.links.html);
+    item.setAttribute('target', '_blank');
+    // Create img for photo
+    const img = document.createElement('img');
+    ime.setAttribute('src', photo.urls.regular);
+    img.setAttribute('alt', photo.alt_description);
+    img.setAttribute('title', photo.alt_description);
+  });
+} 
+
+
 
 // UNSPLASH API
 const count = 10;
