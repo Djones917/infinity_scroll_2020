@@ -7,6 +7,20 @@ let photosArray = [];
 
 
 
+// UNSPLASH API
+const count = 10;
+const apiKey = '4DVV1N03R9y736qXG9fVSyI9GeNF8PY4wcwzSktM51g';
+const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
+
+
+
+// Check if all images were loaded
+function imageLoaded() {
+  
+}
+
+
+
 // Helpter function to set attributes on DOM elements
 function setAttributes(element, attributes) {
    for (const key in attributes) {
@@ -35,6 +49,8 @@ function displayPhotos() {
       alt: photo.alt_description,
       title: photo.alt_description,
     });
+    // Event Listener, check when each is finish loading
+    img.addEventListener('load', imageLoaded);
     // Put img inside <a>, then put both inside imageContainer Element
     item.appendChild(img);
     imageContainer.appendChild(item);
@@ -42,11 +58,6 @@ function displayPhotos() {
 } 
 
 
-
-// UNSPLASH API
-const count = 10;
-const apiKey = '4DVV1N03R9y736qXG9fVSyI9GeNF8PY4wcwzSktM51g';
-const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 // Get photos from api
 async function getPhotos() {
