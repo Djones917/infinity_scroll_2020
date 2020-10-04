@@ -92,3 +92,4 @@ window.addEventListener('scroll', () => {
 // ON LOAD
 getPhotos();
 
+// Finished for now
